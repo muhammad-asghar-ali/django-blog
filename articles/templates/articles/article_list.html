@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article List</title>
-</head>
-<body>
-    <h1>This is article page</h1>
-    <ul>
+{% extends 'base_layout.html' %} {% block content %}
+<h1>This is article page</h1>
+<!-- <ul>
         <li>article 1</li>
         <li>article 2</li>
         <li>article 3</li>
         <li>article 4</li>
         <li>article 5</li>
-    </ul>
-</body>
-</html>
+    </ul> -->
+
+<!-- tempalte tages -->
+{% for article in articles %}
+<div class="article">
+  <h2><a href="#">{{ article.title }}</a></h2>
+  <!-- use the model methods -->
+  <p>{{ article.snippet }}</p>
+
+  <p>{{ article.body }}</p>
+  <p>{{ article.date }}</p>
+</div>
+{% endfor %} {% endblock %}
