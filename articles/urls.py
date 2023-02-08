@@ -8,6 +8,7 @@ app_name = 'articles'
 urlpatterns = [
     # Named URL's
     path('', views.article_list, name="list"),
+    path('create/', views.article_create, name='create'),
     # URL Parameters
     re_path(r'^(?P<slug>[\w-]+)/$', views.article_detail, name="detail")
 ]
