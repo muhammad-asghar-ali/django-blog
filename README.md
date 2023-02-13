@@ -1,4 +1,4 @@
-Django
+### Django commands
 
 Django-admin startproject projectName
 
@@ -6,7 +6,7 @@ python3 manage.py runserver
 
 python3 manage.py startapp articles
 
-Migrations
+### Migrations commands
 
 python3 manage.py makemigrations
 
